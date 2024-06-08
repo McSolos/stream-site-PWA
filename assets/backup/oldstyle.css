@@ -1,0 +1,392 @@
+/*@import url('https://fonts,googleis.com/css2?family=Roboto:wght@300;400;700&display=swap');*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ body{
+    font-family: 'Roboto', sans-serif;
+ }
+
+ .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 15px;
+ }
+
+ main{
+    height: calc(100vh - 70px);
+    display: flex;
+    background-color: #f9f9f9;
+ }
+
+ .side-bar{
+    max-height: 100%;
+    max-width: 30%;
+    min-width: 20%;
+    background-color: white;
+    overflow-y: hidden;
+ }
+
+ @media (max-width:830px){
+    .side-bar span{
+        display: none;
+        justify-content: center;
+        align-items: center;
+    }
+    .material-icons{
+      justify-content: center;
+      align-items: center;
+    }
+     
+ }
+
+ .left{
+    display: flex;
+    align-items: center;
+    min-width: 10%;
+ }
+
+ .logo {
+  max-width: 200px; /* Adjust the maximum width as needed */
+  max-height: 100px; /* Adjust the maximum height as needed */
+  width: auto;
+  height: auto;
+}
+
+
+ .left #menu{
+    padding: 0 7px;
+    cursor: pointer;
+ }
+
+ .search{
+    display: flex;
+ }
+
+ .search form{
+    display: flex;
+    border: 1px solid #ddd;
+    height: 45px;
+ }
+
+.search input{
+    width: 600px;
+    padding: 10px;
+    border: 0;
+    height: 100%;
+    border-radius: 2px 0 0 2px;
+}
+
+@media ( max-width:880) {
+  .search input{
+    max-width: 300px;
+    
+}
+}
+
+.input:focus{
+    outline: none;
+    border: 1px solid #ddd;
+}
+
+.search button{
+    height: 100%;
+    width: 60px;
+    border: none;
+}
+
+.mic{
+    margin-top: 10px;
+}
+
+.nav-link .material-icons {
+  font-size: 24px;
+  color: #333;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.nav-link:hover .material-icons {
+  color: var(--viridian-green);
+  transform: scale(1.2);
+}
+
+ .nav{
+   width: 100%;
+   height: flex;
+   flex-direction: column;
+   margin-bottom: 15px;
+   margin-top: 15px;
+ }
+
+ .nav-link{
+   display: flex;
+   align-items: center;
+   padding: 12px 25px;
+ }
+
+ .nav-link span{
+   margin-left: 15px;
+ }
+
+ .nav-link:hover{
+   background: #e5e5e5;
+   cursor: pointer;
+ }
+
+ .active{
+   background-color: #e5e5e5;
+ }
+
+.hr{
+   height: 1px;
+   background: #e5e5e5;
+   border: none;
+}
+
+.content{
+   background-color: #f9f9f9;
+   width: 70%;
+   height: 100%;
+   padding: 15px 15px;
+   border-top: 1px solid #ddd;
+   overflow-y: scroll;
+}
+
+.videos{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   flex-wrap: wrap;
+}
+
+.video{
+   width: 270px;
+   margin-bottom: 30px;
+}
+
+.content-thumbnail{
+   width: 100%;
+   height: 170px;
+}
+
+.content-thumbnail img{
+   object-fit: cover;
+   height: 94%;
+   width: 100%;
+}
+
+.author img{
+   object-fit: cover;
+   border-radius: 50%;
+   height: 40px;
+   width: 40px;
+   margin-right:10px ;
+}
+
+.details {
+   display: flex;
+ }
+  
+ .title {
+   display: flex;
+   flex-direction: column;
+ }
+  
+ .title h3 {
+   color: rgb(3, 3, 3);
+   line-height: 18px;
+   font-size: 14px;
+   margin-bottom: 6px;
+ }
+  
+ .title a,
+ span {
+   text-decoration: none;
+   color: rgb(96, 96, 96);
+   font-size: 12px;
+ }
+
+
+
+
+
+/*-----------------------------------------------------
+            watch.html
+.....................................................*/
+
+
+
+
+
+:root {
+
+   /**
+    * colors
+    */
+ 
+   --battleship-gray: hsl(0, 0%, 53%);
+   --viridian-green: hsl(180, 98%, 31%);
+   --silver-chalice: hsl(0, 0%, 69%);
+   --mikado-yellow: hsl(47, 98%, 50%);
+   --granite-gray: hsl(0, 0%, 40%);
+   --independence: hsl(219, 20%, 32%);
+   --spanish-gray: hsl(0, 0%, 61%);
+   --oxford-blue: hsl(222, 46%, 17%);
+   --black-coral: hsl(223, 8%, 44%);
+   --eerie-black: hsl(210, 11%, 15%);
+   --light-gray: hsl(0, 0%, 80%);
+   --white-2: hsl(0, 0%, 98%);
+   --white-1: hsl(0, 0%, 100%);
+   --black: hsl(0, 0%, 0%);
+   --jet: hsl(0, 0%, 20%);
+}
+ 
+ 
+ .header {
+   background-image: url('./assets/images/hero-bg-bottom.png');
+   background: var(--viridian-green);
+   padding-block: 20px;
+   height: 88px;
+   overflow: hidden;
+   transition: 0.25s var(--cubic-out);
+   }
+
+ 
+ /* Set basic styles */
+ body {
+  display: contents;
+     font-family: Arial, sans-serif;
+     background-color: #f9f9f9;
+ }
+
+
+
+ .watch-contents {
+  display: flex;
+  flex-direction: column;
+ 
+  
+
+  width: 100%; /* Adjust this value as needed */
+}
+
+
+ 
+ /* Video player styles */
+ 
+
+ .player{
+   max-width: fit-content;
+ }
+
+ #videoPlayer {
+     margin: 20px auto;
+     max-width: 800px;
+     max-height: 400px;
+     text-align: center;
+ }
+ 
+ #video {
+     width: 100%;
+     max-width: 100%;
+ }
+ 
+ /* Video thumbnail styles */
+ #videoList {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     padding: 20px;
+ }
+ 
+ .thumbnail {
+     width: calc(20% - 20px); /* Adjust based on the number of thumbnails */
+     margin: 10px;
+     cursor: pointer;
+     background-color:rgb(255, 255, 255);
+     border-radius: 15px;
+     
+     
+ }
+ 
+ .thumbnail :hover{
+     background-color: #e5e5e5;
+     transition: 0.7sec;
+ }
+ 
+ 
+ .thumbnail img {
+     width: 100%;
+     height: auto;
+     border-radius: 5px;
+     
+ }
+ 
+ .thumbnail p {
+     margin-top: 5px;
+     text-align: left;
+     font-family: ariel, Helvetica;
+     font-weight: bold;
+ }
+
+
+ /***************************************************************
+ *******************profile-***********************************
+ ***************************************************************/
+
+.profile-container{
+  width: 100%;
+  max-width: 600px;
+  position: relative;
+  text-align: center;
+}
+
+.cover-photo{
+  width: 100%;
+  height: auto;
+}
+
+.profile-pic{
+  position: absolute;
+  left: 50%;
+  bottom: -50px;
+  transform: translateX(-50%);
+  border: 5px solid white;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 100px;
+  height: 100px;  
+}
+
+.profile-pic img{
+  width: 100%;
+  height: auto;
+}
+
+
+ 
+ /* Responsive styles */
+ @media screen and (max-width: 1060px) {
+  .right{
+    display: none;
+  }
+}
+
+
+
+
+ @media screen and (max-width: 768px) {
+     .thumbnail {
+         width: calc(33.33% - 20px);
+     }
+ }
+ 
+ @media screen and (max-width: 576px) {
+     .thumbnail {
+         width: calc(50% - 20px);
+     }
+ }
+ 

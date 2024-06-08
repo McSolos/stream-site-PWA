@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-eqiuv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#009578">
+    <link rel="stylesheet" href="https://unpkg.com/xgplayer/dist/index.min.css">
+    <link rel="stylesheet" href="./assets/css/oldstyle.css"/>
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
+
+    <title>ipNX MediaHub - News - CGTN Documentary</title>
+  
+</head>
+<body>
+    <header class="header">
+        <div class="logo left">
+            <i id="menu" class="material-icons">menu</i>
+            <!-- <h3>ipNX</h3> -->
+            <img src="/assets/images/ipnx-media-hub-logo.png" alt="">
+        </div>
+    
+        <div class="search center">
+            <form action="">
+                <input type="text" placeholder="Search">
+                <button><i class="material-icons">search</i></button>
+            </form>
+            <i class="material-icons mic">mic</i>
+        </div>
+    
+        <div class="icons right">
+            <div class="icons right">
+                <a href="">
+                    <i class="material-icons">videocam</i>
+                </a>
+                <a href="">
+                    <i class="material-icons">apps</i>    
+                </a>
+                <a href="">
+                    <i class="material-icons">notifications</i>    
+                </a>
+                <a href="/assets/otherHTML/profile.html">
+                    <i class="material-icons display-this">account_circle</i>
+                </a>
+            </div>
+        </header>
+    
+
+        <main>
+            <div class="side-bar">
+                <div class="nav">
+                    <a href="/index.html" class="nav-link active">
+                        <i class="material-icons">home</i>
+                        <span class="text">Home</span>
+                    </a>
+                <a href="" class="nav-link">
+                    <i class="material-icons">local_fire_department</i>
+                    <span>Trending</span>
+                </a>
+                <a href="" class="nav-link ">
+                    <i class="material-icons">subscriptions</i>
+                    <span>Subscriptions</span>
+                </a>
+    
+                <hr>
+                <!-- hr -->
+                <a href="" class="nav-link ">
+                    <i class="material-icons">library_add_check</i>
+                    <span>Library</span>
+                </a>
+                <a href="" class="nav-link ">
+                    <i class="material-icons">history</i>
+                    <span>History</span>
+                </a>
+                <a href="" class="nav-link ">
+                    <i class="material-icons">play_arrow</i>
+                    <span>Your Videos</span>
+                </a>
+                <a href="" class="nav-link ">
+                    <i class="material-icons">watch_later</i>
+                    <span>Watch Later</span>
+                </a>
+                <a href="" class="nav-link ">
+                    <i class="material-icons">thumb_up</i>
+                    <span>Liked Videos</span>
+                </a>
+            </div>
+        </div>
+
+        <section class="watch-contents">  
+            <div id="videoPlayer"></div>
+            <div id="videoList">
+                <!-- Thumbnails for the 5 videos will be generated here -->
+                <div class="thumbnail" onclick="playVideo('https://alpha.ipnxnigeria.net/news/africanews.m3u8')">
+                    <img src="/assets/images/africa.avif" alt="Africa: Your voice">
+                    <p>Africanews: Your voice</p>
+                </div>
+                
+                <div class="thumbnail" onclick="playVideo('https://alpha.ipnxnigeria.net/doc/cgtndocu.m3u8')">
+                    <img src="/assets/images/cgt.jfif" alt="CGTN Documentary">
+                    <p>CGTN Documentary</p>
+                </div>
+                
+                <div class="thumbnail" onclick="playVideo('https://alpha.ipnxnigeria.net/news/aljazeera.m3u8')">
+                    <img src="/assets/images/aljazera.png" alt="Doctors or ""Doctors""">
+                    <p>Al Jazeera News""</p>
+                </div>
+                
+                <div class="thumbnail" onclick="playVideo('https://alpha.ipnxnigeria.net/doc/natgeowild.m3u8')">
+                    <img src="/assets/images/natgeo.jfif" alt="Nat Geo Wild">
+                    <p>Nat Geo Wild</p>
+                </div>
+
+                
+                </div>
+                
+        </section>
+</body>
+<script type="text/javascript" src="https://alpha.ipnxnigeria.net/tools/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="https://alpha.ipnxnigeria.net/tools/js/xgplayer-2.31.4/browser/index.js"></script>
+<script type="text/javascript" src="https://alpha.ipnxnigeria.net/tools/js/xgplayer-hls.js-2.6.1/browser/index.js"></script>
+<script src="/assets/js/script.js"></script>
+<!-- <script type="text/javascript">
+  let player;
+  $(function(){
+    player = new HlsJsPlayer({
+      id: "videoPlayer",
+      url: 'https://alpha.ipnxnigeria.net/news/aljazeera.m3u8',
+      isLive: true,
+      autoplay: true,
+      volume: 0.8,
+      width: 1024,
+      pip: true,
+      download: false,
+      fitVideoSize: 'auto',
+      lang: 'en',
+    });
+  });
+
+  function playVideo(url) {
+    player.switchURL(url);
+  }
+</script> -->
+</html>
